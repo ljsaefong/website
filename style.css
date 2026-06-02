@@ -1,0 +1,55 @@
+body {
+    background-color: #f2f2f2;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+  }
+  
+  nav {
+    background: #9eca9e;
+    color: white;
+    padding: 10px;
+  }
+
+  .music-player {
+    width: 100%;
+    max-width: 500px;
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00000055;
+    color: #fff;
+    margin: 30px auto;
+    font-family: sans-serif;
+  }
+  
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .controls button {
+    background: #444;
+    border: none;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .controls button:hover {
+    background: #666;
+  }
+  
+  .controls input[type="range"] {
+    flex: 1;
+    accent-color: #1db954; /* Spotify green style */
+  }
+
+  .time {
+    width: 50;
+    padding: 15px;
+    border-radius: 5px;
+  }
+
+
+  

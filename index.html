@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>Welcome to my World!</title>
+            
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body style="background-color: rgb(176, 214, 172);"></body>
+<body>
+    
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+
+
+    <nav class="mobile-nav">
+        <div class="time"></div>
+        <script src="https://cdn.logwork.com/widget/text.js"></script>
+        <a href="https://logwork.com/current-time-in-roseburg-united-states-oregon" class="clock-widget-text" data-timezone="America/Los_Angeles" data-language="en" data-textcolor="#b32d2d" data-background="#ba9e9e" data-digitscolor="#382121">Roseburg, United States, Oregon</a>
+       
+
+        <ul id="nav-links" class="nav-links hidden">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    <h1>Welcome to my World Homepage!</h1>
+    <img src="received_2060596577304758.jpeg" alt="Aezul" width="200" height="150">
+    <button onclick="alert('Liew Jade Saefong\nContact Info: 916-598-4354, ljsaefong@gmail.com')">Click Me For Contact Info</button>
+    <div id="About Me">
+        <p>
+        Hi, my name is Liew Jade Saefong and I am a recent computer science major graduate from University of California, Davis!
+        </p>
+        <p>You can learn more 
+         <a href="about.html">here!</a>
+        </p>
+
+        <a class="weatherwidget-io" href="https://forecast7.com/en/43d22n123d34/roseburg/?unit=us" data-label_1="ROSEBURG" data-label_2="WEATHER" data-theme="original" >ROSEBURG WEATHER</a>
+        <script>
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+        </script>
+    <div id="media">
+        <h2>Media</h2>
+
+        <div class="music-player">
+            <h2>Aespa- Thirsty</h2>
+            <audio id="audio" src="aespa-thirsty.mp3"></audio>
+            
+            <div class="controls">
+              <button id="playBtn">▶️</button>
+              <button id="pauseBtn">⏸️</button>
+              <span id="current">0:00</span>
+              <input type="range" id="progress" value="0" min="0" max="100">
+              <span id="duration">0:00</span>
+            </div>
+          </div>
+
+
+          <script>
+            const audio = document.getElementById('audio');
+            const playBtn = document.getElementById('playBtn');
+            const pauseBtn = document.getElementById('pauseBtn');
+            const progress = document.getElementById('progress');
+            const current = document.getElementById('current');
+            const duration = document.getElementById('duration');
+          
+            // Format time as mm:ss
+            function formatTime(time) {
+              const mins = Math.floor(time / 60);
+              const secs = Math.floor(time % 60);
+              return `${mins}:${secs < 10 ? '0' + secs : secs}`;
+            }
+          
+            // Update duration when loaded
+            audio.addEventListener('loadedmetadata', () => {
+              duration.textContent = formatTime(audio.duration);
+            });
+          
+            // Update current time & progress bar as song plays
+            audio.addEventListener('timeupdate', () => {
+              current.textContent = formatTime(audio.currentTime);
+              progress.value = (audio.currentTime / audio.duration) * 100;
+            });
+          
+            // Seek when slider is moved
+            progress.addEventListener('input', () => {
+              audio.currentTime = (progress.value / 100) * audio.duration;
+            });
+          
+            // Play & pause buttons
+            playBtn.addEventListener('click', () => audio.play());
+            pauseBtn.addEventListener('click', () => audio.pause());
+          </script>
+          
+          
+        <h3>My Favorite Memes</h3>
+        <ol>
+            <li><img src="Screenshot_20230307-205551.png" alt="RabbitBunny" width="200" height="150"></li>
+            <li><img src="Screenshot_20230317-140028.jpg" alt="capy1" width="200" height="150"></li>
+            <li><img src="capy.jpg" alt="capy2" width="200" height="150"></li>
+            
+        </ol>
+       
+    </div>
+</body>
+
+</html>
