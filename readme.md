@@ -1,0 +1,1 @@
+Hi, if you're here lurking through my repo, welcome! I don't think there's much to see here as I started this mainly as a journal. Now that I've uploaded it here and created my website, it is now more a public journal. Thanks for coming and feel free to look around!
