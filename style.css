@@ -19,10 +19,8 @@ body {
   color: #fff;
   margin: 30px auto;
   font-family: sans-serif;
-
   display: flex;
   flex-direction: column;
-
   align-items: stretch; /* IMPORTANT: stop forcing everything to center */
   text-align: left;     /* default reset */
 }
@@ -65,5 +63,11 @@ body {
     border-radius: 5px;
   }
 
-
+.divider {
+    border: none;
+    height: 3px;
+    background-color: #333;
+    width: 80%;
+    margin: 40px auto;
+}
   
