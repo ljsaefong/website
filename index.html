@@ -27,7 +27,7 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-      <div style="text-align: center;">
+      <div style="text-align: center;"> 
     <h1>Welcome to my World Homepage!</h1> 
     <img src="aezul.jpeg" alt="Aezul" width="200" height="150"> <p></p>
     <button onclick="alert('Liew Jade Saefong\nContact Info: 916-598-4354, ljsaefong@gmail.com')">Click Me For Contact Info</button> </div>
@@ -36,9 +36,8 @@
         <p>
         Hi, my name is Liew Jade Saefong and I am a recent computer science major graduate from University of California, Davis!
         </p>
-        <p>You can learn more about me 
-         <a href="about.html">here!</a>
-        </p> </div>
+        <p>You can learn more about me <a href="about.html">here!</a>
+        </p> 
 
         <a class="weatherwidget-io" href="https://forecast7.com/en/38d58n121d49/sacramento/?unit=us" data-label_1="Sacramento" data-label_2="WEATHER" data-label_3="Today" data-theme="original" >SACRAMENTO WEATHER</a>
         <script>
@@ -117,13 +116,53 @@
           </script>
           
           
-        <h3>My Favorite Memes</h3>
-        <ol>
-            <li><img src="meme1.png" alt="RabbitBunny" width="200" height="150"></li>
-            <li><img src="meme2.jpg" alt="capy1" width="200" height="150"></li>
-            <li><img src="meme3.jpg" alt="capy2" width="200" height="150"></li>
-            
-        </ol>
+       <h3>My Favorite Memes</h3>
+
+      <div class="meme-slideshow">
+          <img id="memeImage" src="meme1.png" alt="My favorite meme" width="400">
+
+          <br><br>
+
+          <button id="prevBtn">⬅️</button>
+          <button id="nextBtn">➡️</button>
+      </div>
+
+      <script>
+          const memes = [
+              "meme1.png",
+              "meme2.jpg",
+              "meme3.jpg",
+              "meme4.jpeg",
+              "meme5.jpeg",
+              "meme6.jpeg",
+              "meme7.jpeg",
+
+          ];
+
+          let currentMeme = 0;
+
+          const memeImage = document.getElementById("memeImage");
+
+          document.getElementById("nextBtn").addEventListener("click", () => {
+              currentMeme++;
+
+              if (currentMeme >= memes.length) {
+                  currentMeme = 0;
+              }
+
+              memeImage.src = memes[currentMeme];
+          });
+
+          document.getElementById("prevBtn").addEventListener("click", () => {
+              currentMeme--;
+
+              if (currentMeme < 0) {
+                  currentMeme = memes.length - 1;
+              }
+
+              memeImage.src = memes[currentMeme];
+          });
+      </script>
        
     </div>
 </body>
