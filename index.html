@@ -50,8 +50,9 @@
 
         <div class="music-player">
             <img src="aespa-girls.jpg" alt="Aespa" width="200" height="150">
-            <h2>Aespa- Welcome to My World</h2>
-            <audio id="audio" src="aespa-welcometomyworld.mp3"></audio>
+            <h2 id="songTitle">Loading...</h2>
+            <audio id="audio"></audio>
+
             
             <div class="controls">
               <button id="playBtn">▶️</button>
@@ -64,6 +65,23 @@
 
 
           <script>
+
+            const songs = [
+                {
+                  title: "Aespa - Welcome to My World",
+                  file: "aespa-welcometomyworld.mp3"
+                },
+                {
+                title: "Aespa - Girls",
+                file: "aespa-girls.mp3"
+                }
+              ];
+
+            const randomSong = songs[Math.floor(Math.random() * songs.length)];
+            const audio = document.getElementById('audio');
+            const songTitle = document.getElementById('songTitle');
+            audio.src = randomSong.file;
+            songTitle.textContent = randomSong.title;
             const audio = document.getElementById('audio');
             const playBtn = document.getElementById('playBtn');
             const pauseBtn = document.getElementById('pauseBtn');
