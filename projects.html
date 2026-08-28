@@ -17,6 +17,11 @@
         <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
+  <div class="bunny-game">
+    <div id="bunny">🐇</div>
+    <div id="carrot">🥕</div>
+</div>
+
 <div style="text-align: center;"</div>
   </body>
 </p>
@@ -28,3 +33,80 @@ Detection </a> <br></br>
     Here's a project involving python, html, and css:
     <br></br>
     <a href="https://ljsaefong.github.io/website/" target="_blank">This Website</a>
+
+    <script>
+const bunny = document.getElementById("bunny");
+const carrot = document.getElementById("carrot");
+
+let goingRight = true;
+let bunnyPosition = 20;
+let speed = 3;
+let eating = false;
+
+function animateBunny() {
+
+    const screenWidth = bunny.parentElement.clientWidth;
+    const bunnyWidth = bunny.offsetWidth;
+
+    if (goingRight && !eating) {
+
+        bunnyPosition += speed;
+
+        // Reached the right side
+        if (bunnyPosition >= screenWidth - bunnyWidth) {
+
+            bunnyPosition = screenWidth - bunnyWidth;
+            bunny.style.left = bunnyPosition + "px";
+
+            // Eat carrot
+            carrot.textContent = "😋";
+            eating = true;
+
+            setTimeout(() => {
+
+                carrot.textContent = "🥕";
+
+                // Turn around
+                goingRight = false;
+                bunny.style.transform = "scaleX(1)";
+                eating = false;
+
+            }, 1000);
+        }
+
+    } else if (!goingRight && !eating) {
+
+        bunnyPosition -= speed;
+
+        // Reached the left side
+        if (bunnyPosition <= 0) {
+
+            bunnyPosition = 0;
+
+            // Turn around
+            goingRight = true;
+            bunny.style.transform = "scaleX(-1)";
+        }
+    }
+
+    bunny.style.left = bunnyPosition + "px";
+
+    requestAnimationFrame(animateBunny);
+}
+
+
+// Hopping animation
+setInterval(() => {
+
+    bunny.classList.add("hop");
+
+    setTimeout(() => {
+        bunny.classList.remove("hop");
+    }, 250);
+
+}, 500);
+
+
+// Start
+animateBunny();
+</script>
