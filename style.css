@@ -2,12 +2,33 @@ body {
     background-color: #f2f2f2;
     font-family: "Comic Sans MS", sans-serif ;
   }
-  
-  nav {
-    background: #9eca9e;
-    color: white;
-    padding: 10px;
-  }
+ nav {
+  background: #9eca9e;
+  color: white;
+  padding: 10px;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+  margin: 20px;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
 
  .music-player {
   width: 100%;
@@ -77,4 +98,6 @@ body {
   object-fit: contain;
 }
 
-  
+  #songTitle {
+    margin-top: 15px;
+}
